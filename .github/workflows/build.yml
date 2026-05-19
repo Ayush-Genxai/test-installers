@@ -61,7 +61,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          configPath: src-tauri/tauri.conf.dev.json
+          args: --config src-tauri/tauri.conf.dev.json
 
       - name: Upload Windows artifacts
         if: matrix.os == 'windows-latest'
@@ -80,7 +80,6 @@ jobs:
           path: |
             src-tauri/target/release/bundle/deb/*.deb
             src-tauri/target/release/bundle/appimage/*.AppImage
-            src-tauri/target/release/bundle/rpm/*.rpm
 
       - name: Upload Mac artifacts
         if: matrix.os == 'macos-latest'
@@ -89,4 +88,3 @@ jobs:
           name: Mac-Installers
           path: |
             src-tauri/target/release/bundle/dmg/*.dmg
-            src-tauri/target/release/bundle/macos/*.app
