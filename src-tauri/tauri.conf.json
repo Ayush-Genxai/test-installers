@@ -5,7 +5,7 @@
   "identifier": "com.genxai.supabaseauthapp",
   "build": {
     "frontendDist": "../build",
-    "devUrl": "http://localhost:3000",
+    "devUrl": "https://dev.advico.ai",
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },
