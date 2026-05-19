@@ -4,30 +4,23 @@
   "version": "0.1.0",
   "identifier": "com.genxai.supabaseauthapp",
   "build": {
-    "frontendDist": "https://dev.advico.ai",
-    "devUrl": "https://dev.advico.ai",
-    "beforeDevCommand": "",
-    "beforeBuildCommand": ""
+    "frontendDist": "../build",
+    "devUrl": "http://localhost:3000",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
   },
   "app": {
     "windows": [
       {
-        "title": "Advico Dev",
-        "width": 1280,
-        "height": 800,
+        "title": "supabase-auth-app",
+        "width": 800,
+        "height": 600,
         "resizable": true,
         "fullscreen": false
       }
     ],
     "security": {
-      "csp": null,
-      "dangerousRemoteDomainIpcAccess": [
-        {
-          "domain": "dev.advico.ai",
-          "https": true,
-          "enableTauriAPI": true
-        }
-      ]
+      "csp": null
     }
   },
   "bundle": {
@@ -39,6 +32,9 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug"
+    }
   }
 }
