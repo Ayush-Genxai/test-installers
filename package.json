@@ -12,11 +12,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "tauri": "tauri",
-    "dev:app": "tauri dev --config src-tauri/tauri.conf.dev.json",
-    "build:dev": "tauri build --config src-tauri/tauri.conf.dev.json",
-    "build:prod": "tauri build --config src-tauri/tauri.conf.prod.json"
+    "dev:app": "tauri dev",
+    "build:app": "tauri build"
   },
   "browserslist": {
     "production": [
